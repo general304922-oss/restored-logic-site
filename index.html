@@ -5,69 +5,101 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Restored Logic LLC</title>
 <meta name="description" content="Restored Logic LLC refurbishes and resells used business-class laptops. A Florida limited liability company.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#141517">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;450;500;600;700&display=swap">
 <style>
+/* Committed single-theme design: the matte-charcoal-and-red world the hardware
+   itself lives in. Every colour is painted explicitly so the page holds on any
+   host background. */
 :root{
-  --bg:#F3F2EF; --surface:#FFFFFF; --line:#DEDCD6; --line-2:#C4C1B8;
-  --ink:#1A1B18; --body:#3E4139; --muted:#6C6F65;
-  --acc:#1F5D52; --acc-soft:rgba(31,93,82,.09);
-  --disp:"Archivo",ui-sans-serif,system-ui,sans-serif;
-  --read:"Newsreader",Georgia,"Times New Roman",serif;
+  --void:#0E0F10;      /* deepest, behind everything */
+  --bg:#141517;        /* chassis charcoal — warm, never pure black */
+  --panel:#1B1D20;     /* raised surface */
+  --panel-2:#212429;
+  --rule:#2A2E33;      /* hairline */
+  --rule-2:#3A4047;
+  --ink:#F0F0EE;       /* headline white, faintly warm */
+  --body:#A9AEB2;
+  --muted:#71777C;
+  --red:#E02A34;       /* TrackPoint */
+  --red-dim:#B4222B;
+  --red-soft:rgba(224,42,52,.10);
+  --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 }
-@media (prefers-color-scheme:dark){:root{
-  --bg:#15171A; --surface:#1D2024; --line:#2B2F34; --line-2:#3B4046;
-  --ink:#EDEEEA; --body:#C3C7BE; --muted:#8E938A;
-  --acc:#6BB5A3; --acc-soft:rgba(107,181,163,.12);
-}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--body);font-family:var(--read);
-  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-.wrap{max-width:660px;margin:0 auto;padding:clamp(40px,9vw,88px) clamp(22px,6vw,32px)}
-h1,h2,.mark{font-family:var(--disp);color:var(--ink);margin:0;line-height:1.15}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--sans);
+  font-size:16.5px;line-height:1.68;font-weight:400;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(120% 70% at 50% -10%, rgba(224,42,52,.045), transparent 60%),
+    linear-gradient(var(--bg),var(--bg));
+  background-attachment:fixed}
+.wrap{max-width:680px;margin:0 auto;padding:clamp(44px,9vw,96px) clamp(22px,6vw,34px)}
+h1,h2{margin:0;color:var(--ink);line-height:1.14;letter-spacing:-.02em}
 
-header{border-bottom:1px solid var(--line-2);padding-bottom:clamp(26px,5vw,38px);
-  margin-bottom:clamp(30px,5vw,44px)}
-.mark{font-size:clamp(27px,6vw,40px);font-weight:700;letter-spacing:-.022em}
-.mark span{color:var(--acc)}
-.tag{font-family:var(--disp);font-size:12px;font-weight:500;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--muted);margin:12px 0 0}
-.lede{font-size:clamp(18px,2.4vw,21px);color:var(--body);margin:20px 0 0;
-  line-height:1.55;text-wrap:pretty}
+/* ---- wordmark ---------------------------------------------------------- */
+header{padding-bottom:clamp(28px,5vw,40px);margin-bottom:clamp(34px,6vw,50px);
+  border-bottom:1px solid var(--rule);position:relative}
+header::after{content:"";position:absolute;left:0;bottom:-1px;width:56px;height:1px;
+  background:var(--red)}
+.mark{font-size:clamp(30px,6.4vw,44px);font-weight:600;letter-spacing:-.032em}
+.mark .dot{color:var(--red);margin-left:1px}
+.tag{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--muted);margin:14px 0 0}
+.lede{font-size:clamp(17px,2.3vw,19.5px);color:var(--body);margin:22px 0 0;
+  line-height:1.62;max-width:56ch;text-wrap:pretty}
+.lede b{color:var(--ink);font-weight:500}
 
-section{margin:0 0 clamp(30px,5vw,42px)}
-h2{font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--acc);margin-bottom:14px}
-p{margin:0 0 15px}
+/* ---- sections ---------------------------------------------------------- */
+section{margin:0 0 clamp(34px,6vw,48px)}
+h2{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:16px;
+  display:flex;align-items:center;gap:9px}
+h2::before{content:"";width:5px;height:5px;background:var(--red);flex:0 0 auto;
+  border-radius:1px}
+p{margin:0 0 15px;max-width:60ch}
 p:last-child{margin-bottom:0}
+strong{color:var(--ink);font-weight:500}
 
-.steps{list-style:none;margin:0;padding:0;counter-reset:s}
-.steps li{counter-increment:s;position:relative;padding-left:44px;margin-bottom:20px}
-.steps li:last-child{margin-bottom:0}
-.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:2px;
-  font-family:var(--disp);font-size:12px;font-weight:600;color:var(--acc);
-  background:var(--acc-soft);border-radius:3px;padding:4px 7px;letter-spacing:.04em}
-.steps b{font-family:var(--disp);font-size:16px;font-weight:600;color:var(--ink);
-  display:block;margin-bottom:2px;letter-spacing:-.005em}
+/* ---- process ----------------------------------------------------------- */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;
+  border-left:1px solid var(--rule);padding-left:0}
+.steps li{counter-increment:s;position:relative;padding:0 0 24px 26px;margin:0}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:"";position:absolute;left:-3px;top:9px;width:5px;height:5px;
+  background:var(--rule-2);border-radius:50%}
+.steps li:first-child::before{background:var(--red)}
+.steps b{display:block;color:var(--ink);font-weight:500;font-size:16.5px;
+  letter-spacing:-.008em;margin-bottom:3px}
+.steps b::after{content:" / " counter(s,decimal-leading-zero);font-family:var(--mono);
+  font-size:11px;font-weight:400;color:var(--muted);letter-spacing:.08em}
+.steps span{display:block;max-width:56ch}
 
-.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;
-  padding:22px 24px}
-dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 22px;font-size:15.5px}
-dt{font-family:var(--disp);font-size:11.5px;font-weight:600;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--muted);padding-top:4px;white-space:nowrap}
-dd{margin:0;color:var(--ink)}
-a{color:var(--acc);text-decoration:none;border-bottom:1px solid var(--acc-soft)}
-a:hover{border-bottom-color:var(--acc)}
-a:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+/* ---- contact ----------------------------------------------------------- */
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:5px;
+  padding:24px 26px;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:linear-gradient(var(--red),var(--red-dim))}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:11px 26px;align-items:baseline}
+dt{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);white-space:nowrap}
+dd{margin:0;color:var(--ink);font-size:15.5px}
+a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--red-dim);
+  padding-bottom:1px;transition:border-color .15s,color .15s}
+a:hover{color:var(--red);border-bottom-color:var(--red)}
+a:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
 
-footer{border-top:1px solid var(--line);margin-top:clamp(34px,6vw,52px);padding-top:20px;
-  font-family:var(--disp);font-size:12.5px;color:var(--muted);
-  display:flex;flex-wrap:wrap;gap:6px 20px}
+footer{border-top:1px solid var(--rule);margin-top:clamp(40px,7vw,58px);padding-top:22px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 24px;text-transform:uppercase}
 @media (max-width:520px){
-  dl{grid-template-columns:1fr;gap:2px}
-  dt{padding-top:10px}
+  dl{grid-template-columns:1fr;gap:3px}
+  dt{padding-top:12px}
+  dt:first-of-type{padding-top:0}
 }
 </style>
 </head>
@@ -75,20 +107,20 @@ footer{border-top:1px solid var(--line);margin-top:clamp(34px,6vw,52px);padding-
 <div class="wrap">
 
 <header>
-  <h1 class="mark">Restored <span>Logic</span></h1>
-  <p class="tag">Refurbished business hardware · Florida</p>
+  <h1 class="mark">Restored Logic<span class="dot">.</span></h1>
+  <p class="tag">Refurbished business hardware &nbsp;·&nbsp; Florida</p>
   <p class="lede">We buy used business-class laptops, bring them back to working
-  condition, and resell them to people who need reliable hardware without paying
-  for new.</p>
+  condition, and resell them to people who need <b>reliable hardware without paying
+  for new</b>.</p>
 </header>
 
 <section>
   <h2>What we do</h2>
   <p>Corporate laptops leave their first life in bulk — lease returns, office
-  refreshes, recycler pallets. Most are three to six years old, built to a far
-  higher standard than consumer machines, and still have years of service in them.
-  A missing drive, a dead battery or a wiped operating system is enough to move one
-  from an asset to a write-off.</p>
+  refreshes, recycler pallets. Most are three to six years old, built to a far higher
+  standard than consumer machines, and still have years of service in them. A missing
+  drive, a dead battery or a wiped operating system is enough to move one from an
+  asset to a write-off.</p>
   <p>We buy those machines, assess them properly, restore what is missing, and put
   them back into use.</p>
 </section>
@@ -96,24 +128,24 @@ footer{border-top:1px solid var(--line);margin-top:clamp(34px,6vw,52px);padding-
 <section>
   <h2>How it works</h2>
   <ol class="steps">
-    <li><b>Assessment</b>Every unit is evaluated against current market data before
-    purchase, so we know what a machine is worth and what it will cost to make it
-    whole.</li>
-    <li><b>Restoration</b>Drives, memory, batteries and power supplies replaced as
-    needed. Storage is wiped, a clean licensed operating system installed, and the
-    hardware tested before anything is listed.</li>
-    <li><b>Honest listing</b>Specifications are stated accurately and completely —
-    the exact processor, memory, storage and graphics, and any fault we could not
-    resolve. Buyers should know what is arriving.</li>
+    <li><b>Assessment</b><span>Every unit is evaluated against current market data
+    before purchase, so we know what a machine is worth and what it will cost to make
+    it whole.</span></li>
+    <li><b>Restoration</b><span>Drives, memory, batteries and power supplies replaced
+    as needed. Storage is wiped, a clean licensed operating system installed, and the
+    hardware tested before anything is listed.</span></li>
+    <li><b>Honest listing</b><span>Specifications are stated accurately and completely
+    — the exact processor, memory, storage and graphics, and any fault we could not
+    resolve. Buyers should know what is arriving.</span></li>
   </ol>
 </section>
 
 <section>
   <h2>Why used</h2>
-  <p>A well-specified machine from 2019 outperforms most new budget hardware and
-  costs a fraction of it. Keeping one in service for another few years is also the
-  single largest reduction available in the footprint of a computer, most of which
-  is spent before it is ever switched on.</p>
+  <p>A well-specified machine from 2019 outperforms most new budget hardware and costs
+  a fraction of it. Keeping one in service for another few years is also the single
+  largest reduction available in the footprint of a computer, <strong>most of which is
+  spent before it is ever switched on</strong>.</p>
 </section>
 
 <section>
