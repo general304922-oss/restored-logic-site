@@ -7,6 +7,7 @@
 <meta name="description" content="Restored Logic LLC refurbishes and resells used business-class laptops. A Florida limited liability company.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#141517">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;450;500;600;700&display=swap">
@@ -46,11 +47,15 @@ header{padding-bottom:clamp(28px,5vw,40px);margin-bottom:clamp(34px,6vw,50px);
   border-bottom:1px solid var(--rule);position:relative}
 header::after{content:"";position:absolute;left:0;bottom:-1px;width:56px;height:1px;
   background:var(--red)}
-.mark{font-size:clamp(30px,6.4vw,44px);font-weight:600;letter-spacing:-.032em}
+.lockup{display:flex;align-items:center;gap:clamp(14px,3vw,20px)}
+.logo{width:clamp(48px,10vw,62px);height:auto;flex:0 0 auto;
+  font-family:var(--sans)}
+.names{min-width:0}
+.mark{font-size:clamp(26px,5.6vw,40px);font-weight:600;letter-spacing:-.032em}
 .mark .dot{color:var(--red);margin-left:1px}
 .tag{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.19em;
-  text-transform:uppercase;color:var(--muted);margin:14px 0 0}
-.lede{font-size:clamp(17px,2.3vw,19.5px);color:var(--body);margin:22px 0 0;
+  text-transform:uppercase;color:var(--muted);margin:9px 0 0}
+.lede{font-size:clamp(17px,2.3vw,19.5px);color:var(--body);margin:26px 0 0;
   line-height:1.62;max-width:56ch;text-wrap:pretty}
 .lede b{color:var(--ink);font-weight:500}
 
@@ -96,6 +101,10 @@ a:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2p
 footer{border-top:1px solid var(--rule);margin-top:clamp(40px,7vw,58px);padding-top:22px;
   font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);
   display:flex;flex-wrap:wrap;gap:8px 24px;text-transform:uppercase}
+@media (max-width:430px){
+  .lockup{gap:13px}
+  .tag{font-size:10px;letter-spacing:.14em}
+}
 @media (max-width:520px){
   dl{grid-template-columns:1fr;gap:3px}
   dt{padding-top:12px}
@@ -107,8 +116,20 @@ footer{border-top:1px solid var(--rule);margin-top:clamp(40px,7vw,58px);padding-
 <div class="wrap">
 
 <header>
-  <h1 class="mark">Restored Logic<span class="dot">.</span></h1>
-  <p class="tag">Refurbished business hardware &nbsp;·&nbsp; Florida</p>
+  <div class="lockup">
+    <svg class="logo" viewBox="0 0 56 56" role="img" aria-label="Restored Logic logo">
+      <path d="M35.98 14.99 A17 17 0 1 1 20.02 14.99" fill="none" stroke="var(--red)"
+            stroke-width="3.4" stroke-linecap="round"/>
+      <line x1="28" y1="8" x2="28" y2="20" stroke="var(--red)"
+            stroke-width="3.4" stroke-linecap="round"/>
+      <text x="28" y="37.5" text-anchor="middle" fill="var(--ink)"
+            font-size="15.5" font-weight="600" letter-spacing="-.6">RL</text>
+    </svg>
+    <div class="names">
+      <h1 class="mark">Restored Logic<span class="dot">.</span></h1>
+      <p class="tag">Refurbished business hardware &nbsp;·&nbsp; Florida</p>
+    </div>
+  </div>
   <p class="lede">We buy used business-class laptops, bring them back to working
   condition, and resell them to people who need <b>reliable hardware without paying
   for new</b>.</p>
