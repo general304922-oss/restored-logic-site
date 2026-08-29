@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restored Logic LLC</title>
+<meta name="description" content="Restored Logic LLC refurbishes and resells used business-class laptops. A Florida limited liability company.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<style>
+:root{
+  --bg:#F3F2EF; --surface:#FFFFFF; --line:#DEDCD6; --line-2:#C4C1B8;
+  --ink:#1A1B18; --body:#3E4139; --muted:#6C6F65;
+  --acc:#1F5D52; --acc-soft:rgba(31,93,82,.09);
+  --disp:"Archivo",ui-sans-serif,system-ui,sans-serif;
+  --read:"Newsreader",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#15171A; --surface:#1D2024; --line:#2B2F34; --line-2:#3B4046;
+  --ink:#EDEEEA; --body:#C3C7BE; --muted:#8E938A;
+  --acc:#6BB5A3; --acc-soft:rgba(107,181,163,.12);
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--read);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:660px;margin:0 auto;padding:clamp(40px,9vw,88px) clamp(22px,6vw,32px)}
+h1,h2,.mark{font-family:var(--disp);color:var(--ink);margin:0;line-height:1.15}
+
+header{border-bottom:1px solid var(--line-2);padding-bottom:clamp(26px,5vw,38px);
+  margin-bottom:clamp(30px,5vw,44px)}
+.mark{font-size:clamp(27px,6vw,40px);font-weight:700;letter-spacing:-.022em}
+.mark span{color:var(--acc)}
+.tag{font-family:var(--disp);font-size:12px;font-weight:500;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--muted);margin:12px 0 0}
+.lede{font-size:clamp(18px,2.4vw,21px);color:var(--body);margin:20px 0 0;
+  line-height:1.55;text-wrap:pretty}
+
+section{margin:0 0 clamp(30px,5vw,42px)}
+h2{font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--acc);margin-bottom:14px}
+p{margin:0 0 15px}
+p:last-child{margin-bottom:0}
+
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-left:44px;margin-bottom:20px}
+.steps li:last-child{margin-bottom:0}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:2px;
+  font-family:var(--disp);font-size:12px;font-weight:600;color:var(--acc);
+  background:var(--acc-soft);border-radius:3px;padding:4px 7px;letter-spacing:.04em}
+.steps b{font-family:var(--disp);font-size:16px;font-weight:600;color:var(--ink);
+  display:block;margin-bottom:2px;letter-spacing:-.005em}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+  padding:22px 24px}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 22px;font-size:15.5px}
+dt{font-family:var(--disp);font-size:11.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);padding-top:4px;white-space:nowrap}
+dd{margin:0;color:var(--ink)}
+a{color:var(--acc);text-decoration:none;border-bottom:1px solid var(--acc-soft)}
+a:hover{border-bottom-color:var(--acc)}
+a:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+
+footer{border-top:1px solid var(--line);margin-top:clamp(34px,6vw,52px);padding-top:20px;
+  font-family:var(--disp);font-size:12.5px;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:6px 20px}
+@media (max-width:520px){
+  dl{grid-template-columns:1fr;gap:2px}
+  dt{padding-top:10px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1 class="mark">Restored <span>Logic</span></h1>
+  <p class="tag">Refurbished business hardware · Florida</p>
+  <p class="lede">We buy used business-class laptops, bring them back to working
+  condition, and resell them to people who need reliable hardware without paying
+  for new.</p>
+</header>
+
+<section>
+  <h2>What we do</h2>
+  <p>Corporate laptops leave their first life in bulk — lease returns, office
+  refreshes, recycler pallets. Most are three to six years old, built to a far
+  higher standard than consumer machines, and still have years of service in them.
+  A missing drive, a dead battery or a wiped operating system is enough to move one
+  from an asset to a write-off.</p>
+  <p>We buy those machines, assess them properly, restore what is missing, and put
+  them back into use.</p>
+</section>
+
+<section>
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><b>Assessment</b>Every unit is evaluated against current market data before
+    purchase, so we know what a machine is worth and what it will cost to make it
+    whole.</li>
+    <li><b>Restoration</b>Drives, memory, batteries and power supplies replaced as
+    needed. Storage is wiped, a clean licensed operating system installed, and the
+    hardware tested before anything is listed.</li>
+    <li><b>Honest listing</b>Specifications are stated accurately and completely —
+    the exact processor, memory, storage and graphics, and any fault we could not
+    resolve. Buyers should know what is arriving.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Why used</h2>
+  <p>A well-specified machine from 2019 outperforms most new budget hardware and
+  costs a fraction of it. Keeping one in service for another few years is also the
+  single largest reduction available in the footprint of a computer, most of which
+  is spent before it is ever switched on.</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    <dl>
+      <dt>Email</dt><dd><a href="mailto:contact@restoredlogic.com">contact@restoredlogic.com</a></dd>
+      <dt>Entity</dt><dd>Restored Logic LLC</dd>
+      <dt>Registered</dt><dd>State of Florida, United States</dd>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Restored Logic LLC</span>
+  <span>restoredlogic.com</span>
+</footer>
+
+</div>
+</body>
+</html>
