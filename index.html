@@ -42,6 +42,13 @@ h1,h2,h3{margin:0;color:var(--ink);line-height:1.14;letter-spacing:-.02em}
 header{padding-bottom:clamp(30px,5vw,44px);margin-bottom:clamp(30px,5vw,44px);
   border-bottom:1px solid var(--rule);position:relative}
 header::after{content:"";position:absolute;left:0;bottom:-1px;width:64px;height:1px;background:var(--red)}
+.topnav{display:flex;justify-content:flex-end;margin:0 0 clamp(18px,4vw,28px)}
+.topnav a{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--ink);border:1px solid var(--rule-2);border-radius:3px;
+  padding:9px 14px;display:inline-flex;align-items:center;gap:10px;
+  transition:border-color .2s,color .2s,background .2s}
+.topnav a::after{content:"\2197";color:var(--red);letter-spacing:0;font-size:12px}
+.topnav a:hover{border-color:var(--red);background:var(--red-soft);color:var(--ink)}
 .lockup{display:flex;align-items:center;gap:clamp(16px,3.4vw,26px)}
 .logo{width:clamp(84px,17.5vw,108px);height:auto;flex:0 0 auto;font-family:var(--sans);
   filter:drop-shadow(0 0 22px rgba(224,42,52,.20))}
@@ -127,6 +134,7 @@ footer .pip{width:5px;height:5px;background:var(--red);border-radius:1px;opacity
 
   header{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
     gap:0 56px;align-items:end;padding-bottom:44px;margin-bottom:52px}
+  .topnav{grid-column:1 / -1;margin-bottom:36px}
   .lede{margin:0;padding-bottom:4px;font-size:20px;max-width:42ch}
 
   section{display:grid;grid-template-columns:184px minmax(0,1fr);
@@ -169,6 +177,9 @@ footer .pip{width:5px;height:5px;background:var(--red);border-radius:1px;opacity
 <div class="wrap">
 
 <header>
+  <nav class="topnav" aria-label="Site">
+    <a href="https://www.ebay.com/usr/restoredlogic" target="_blank" rel="noopener">Shop on eBay</a>
+  </nav>
   <div class="lockup">
     <svg class="logo" viewBox="0 0 56 56" role="img" aria-label="Restored Logic logo">
       <path d="M35.98 14.99 A17 17 0 1 1 20.02 14.99" fill="none" stroke="var(--red)"
